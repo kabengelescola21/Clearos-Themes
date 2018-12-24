@@ -676,13 +676,14 @@ function _get_header($page, $menus = array())
         if ($page['title'] != $page['current_name'])
             $title = $page['current_name'] . "<i class='breadcrumb-separator fa fa-arrow-circle-right'></i>" . $title;
     }
-    
+   
     $active_header = array();
     $active_header['dashboard'] = '';
     $active_header['marketplace'] = '';
     $active_header['support'] = '';
     $active_header['my-account'] = '';
     $active_header['home'] = '';
+    $active_header['wikisuite'] = '';
 
     if ($page['current_basename'] == 'dashboard')
         $active_header['dashboard'] = "active";
@@ -699,7 +700,8 @@ function _get_header($page, $menus = array())
     $main_menu = array(
         'dashboard' => "<li class='placeholder'></li>",
         'marketplace' => "<li class='placeholder'></li>",
-        'support' => "<li class='placeholder'></li>"
+        'support' => "<li class='placeholder'></li>",
+	'wikisuite' => "<li class='placeholder'></li>"
     );
     if ($framework->session->userdata['nav_acl']['dashboard'])
         $main_menu['dashboard'] = "
@@ -719,6 +721,12 @@ function _get_header($page, $menus = array())
                 <a href='/app/support'><i class='ci-Clear_CARE'></i>" . lang('base_support') . "</a>
             </li> 
         ";
+    if ($framework->session->userdata['nav_acl']['wikisuite'])
+	$main_menu['wikisuite'] = "
+		<li class='wikisuite'" . $active_header['wikisuite'] ."'>
+			<a href='app/wikisuite'><i class='ci-wikisuite'></i> ". lang('base_wikisuite') . "</a>
+		</li>
+	";
 
     return "<header class='mainheader'>
               <div class='navbar-header'>
