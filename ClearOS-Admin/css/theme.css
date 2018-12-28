@@ -2263,7 +2263,7 @@ footer {
   content: "\e611";
 }
 .ci-ClearOS:before, .ci-Wizard:before  {
-  content: "hey";
+  content: "/img/placeholder.png";
 }
 .ci-dashboard:before {
   content: "\e602";
