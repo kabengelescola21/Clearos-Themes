@@ -110,7 +110,7 @@ ul.left_nav > li > a i {
   fill: #7A7474 !important;
 }
 .login_box .login_right input[type="submit"] {
-  color: #ffffff;
+  color: yellow;
 }
 .main-content .content-container .paginate_button a {
   color: #7a7474;

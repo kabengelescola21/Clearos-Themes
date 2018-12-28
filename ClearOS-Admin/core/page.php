@@ -753,7 +753,7 @@ function _get_header($page, $menus = array())
                   <ul class='dropdown-menu' role='menu'>
                     " . ((!empty($page['alerts']) && ($page['alerts']['total'] > 0)) ?  $alert_text : '') . "
                     <li class='divider'></li>
-                      $my_account
+                      $my_accountv
                     <li class='divider'></li>
                     <li><a role='menuitem' href='/app/base/session/logout'>Sign out</a></li>
                   </ul>

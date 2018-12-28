@@ -36,7 +36,7 @@
     .main-wrapper header > ul > li.ClearOS>a.ci-ClearOS:before,
     .pagination>li>a,
     .pagination>li>span {
-        color: <?= $colors[0]; ?>;
+        color: <?= $colors[1]; ?>;
     }
 
     .sub_menu li.active,
